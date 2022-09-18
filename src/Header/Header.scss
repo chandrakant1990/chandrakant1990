@@ -1,0 +1,46 @@
+.Header {
+  display: grid;
+  grid-template-columns: 12% 1fr 17%;
+  height: 100px;
+  align-items: center;
+
+  .icon-container img{
+    margin-left: 10px;
+  }
+  .menu {
+    display: flex;
+    justify-content: space-around;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 0 3% 0 14%;
+  }
+  .menu-item {
+    cursor: pointer;
+    flex: 1 1 0px;
+    text-align: center;
+    padding: 5px 10px;
+  }
+  .menu-item .inner-item {
+    display: inline-block;
+    border-radius: 8px;
+    padding: 3% 10%;
+  }
+
+  .menu-item.selected .inner-item{
+    background-color: #0AEFE9;
+    color: #fff;
+  }
+
+  .appointment {
+    background-color: #0AEFE9;
+    border-radius: 8px;
+    color: #fff;
+    padding: 5px 10px;
+    display: inline;
+    cursor: pointer;
+  }
+  .book-appointment{
+    text-align: right;
+    padding-right: 10px;
+  }
+}

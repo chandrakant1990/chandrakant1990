@@ -1,0 +1,59 @@
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+.App {
+  .main-page-container {
+    padding: 0 10%;
+    min-height:calc(100vh - 338px);;
+  }
+  
+  .bottom-div {
+    height: 188px;
+    display: grid;
+    background-color: #0aefe9;
+    grid-template-rows: 1fr 50px;
+    .bottpm-top,
+    .bottom-bottom {
+      padding: 0% 10%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .bottpm-top{
+      border-bottom: 1px solid #fff;
+      padding: 3% 10%;
+     
+    }
+    .iconic-text{
+      font-size: 32px;
+    font-weight: bold;
+    color: white;
+    }
+    .contact-detail,
+    .copyright-text{
+    color: white;
+    font-size: 18px;
+    }
+    .copyright-text{
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .facebook-size{
+      cursor: pointer;
+      svg{
+        width: 27px;
+        height: 27px;
+      }
+    }
+    .contact-detail.bottom{
+      display: flex;
+      justify-content: center;
+    }
+    .media-icons{
+      margin: 0 10%;
+    }
+  }
+}

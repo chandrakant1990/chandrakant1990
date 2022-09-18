@@ -1,0 +1,20 @@
+.Services {
+  .top-static-text {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    line-height: 0;
+    margin-top: 50px;
+  }
+  .text-static {
+    display: flex;
+    align-items: center;
+    font-size: 125px;
+    font-weight: bold;
+    margin-bottom: 18px;
+  }
+  .text-static.first {
+    justify-content: center;
+    display: flex;
+    margin-left: 14%;
+  }
+}
