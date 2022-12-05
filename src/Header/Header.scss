@@ -44,3 +44,13 @@
     padding-right: 10px;
   }
 }
+
+@media screen and (max-width: 1199px) {
+  .Header {
+      grid-template-columns: 20% 1fr;
+      height: 90px;
+    .menu{
+      display: none;
+    }
+  }
+}

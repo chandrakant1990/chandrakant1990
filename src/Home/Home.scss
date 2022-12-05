@@ -23,89 +23,278 @@
     svg {
       width: 109px;
       height: 108px;
-      path{
-        fill: #0AEFE9;
+      path {
+        fill: #0aefe9;
       }
     }
   }
-  .half-rect-smile{
+  .half-rect-smile {
     height: 100%;
     display: flex;
     align-items: end;
     svg {
-        width: 287px;
-        height: 63px;
-      }
+      width: 287px;
+      height: 63px;
+    }
   }
-  .text-static.second{
+  .text-static.second {
     margin-left: 14%;
   }
-  .text-static.third{
+  .text-static.third {
     display: flex;
     justify-content: right;
     margin-right: 28%;
   }
-  .clinic-vision{
+  .clinic-vision {
     line-height: normal;
     display: flex;
     justify-content: end;
     margin-right: 13%;
   }
-  .clinic-vision .text{
+  .clinic-vision .text {
     width: 570px;
     font-size: 14px;
     color: #535353;
     text-align: justify;
   }
-  .slider-in-home{
+  .slider-in-home {
     margin-top: 6.5%;
     margin-bottom: 5%;
   }
   .creative-thinking,
-  .what-we-do{
+  .what-we-do {
     margin-bottom: 5%;
   }
-  .label-thinking{
+  .label-thinking {
     font-size: 16px;
     text-transform: uppercase;
   }
-  .label-capable{
+  .label-capable {
     font-size: 30px;
     font-weight: bold;
   }
-  .left-right-creative{
+  .left-right-creative {
     display: flex;
     justify-content: space-between;
-    .left{
+    .left {
       font-size: 42px;
-    width: 70%;
-    text-align: justify;
+      width: 70%;
+      text-align: justify;
     }
-    .right{
-
+    .right {
     }
-    .icon-creative{
-      svg{
+    .icon-creative {
+      svg {
         width: 240px;
         height: 198px;
       }
     }
   }
-  .list-of-todo{
+  .list-of-todo {
   }
-  .to-do-main{
+  .to-do-main {
     margin-top: 5%;
     display: flex;
-    .right{
+    .right {
       margin-left: 5%;
-    width: 20%;
-    font-size: 18px;
+      width: 20%;
+      font-size: 18px;
     }
-    .to-do-title{
+    .to-do-title {
       font-weight: bold;
       font-size: 18px;
       margin-bottom: 10%;
     }
   }
-  
+}
+
+@media screen and (max-width: 1199px) {
+  .Home {
+    .top-static-text {
+      display: grid;
+      grid-template-rows: 1fr 1fr 1fr;
+      line-height: 0;
+      margin-top: 0px;
+    }
+    .text-static {
+      display: flex;
+      align-items: center;
+      font-size: 58px;
+      font-weight: bold;
+      margin-bottom: 18px;
+    }
+    .text-static.first {
+      justify-content: center;
+      display: flex;
+      margin-left: 18%;
+    }
+    .zero-image {
+      display: flex;
+      align-items: center;
+      svg {
+        width: 52px;
+        height: 52px;
+        path {
+          fill: #0aefe9;
+        }
+      }
+    }
+    .half-rect-smile {
+      height: 100%;
+      display: flex;
+      align-items: end;
+      svg {
+        width: 87px;
+        height: 27px;
+      }
+    }
+    .text-static.second {
+      margin-left: 10%;
+    }
+    .text-static.third {
+      display: flex;
+      justify-content: right;
+      margin-right: 14%;
+    }
+    .clinic-vision {
+      line-height: normal;
+      justify-content: unset;
+      margin-right: unset;
+      display: inline;
+      padding: 0 5%;
+      margin-top: 5%;
+    }
+    .clinic-vision .text {
+      width: auto;
+      font-size: 14px;
+      color: #535353;
+      text-align: justify;
+    }
+    .slider-in-home {
+      margin-top: 6.5%;
+      margin-bottom: 12%;
+    }
+    .creative-thinking,
+    .what-we-do {
+      margin-bottom: 5%;
+    }
+    .label-thinking {
+      font-size: 16px;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: 5%;
+    }
+    .label-capable {
+      font-size: 30px;
+      font-weight: bold;
+    }
+    .left-right-creative {
+      display: flex;
+      justify-content: space-between;
+      .left {
+        font-size: 17px;
+        width: 85%;
+        text-align: justify;
+      }
+      .right {
+      }
+      .icon-creative {
+        svg {
+          width: 55px;
+          height: 30px;
+        }
+      }
+    }
+    .list-of-todo {
+    }
+    .to-do-main {
+      margin-top: 5%;
+      display: grid;
+    grid-template-rows: 30px 1fr;
+      .right {
+        margin-left: 0%;
+        width: 100%;
+        font-size: 18px;
+      }
+      .left{
+        position: relative;
+        height: 450px;
+        .capability-details{
+          position: absolute;
+    bottom: 0%;
+    background: rgba(0,0,0,0.5);
+    width: 100%;
+    text-align: right;
+        }
+        .detailed-text{
+          height: 36px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #0aefe9;
+    padding-right: 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+        }
+        .flip {
+          backface-visibility:             hidden;
+          -moz-backface-visibility:    hidden;
+          -ms-backface-visibility:     hidden;
+          -o-backface-visibility:      hidden;
+          -webkit-backface-visibility: hidden;
+          
+          transform-origin:             50% 50% 0px;
+              -moz-transform-origin:    50% 50% 0px;
+              -ms-transform-origin:     50% 50% 0px;
+              -o-transform-origin:      50% 50% 0px;
+              -webkit-transform-origin: 50% 50% 0px;
+          transition: all 3s;
+              -moz-transition:    all 3s;
+              -ms-transition:     all 3s;
+              -o-transition:      all 3s;
+              -webkit-transition: all 3s;
+              position: absolute;
+              height: 450px;
+              width: 100%;
+      }
+        #side-1 {
+          transform:             rotateY( 0deg );
+              -moz-transform:    rotateY( 0deg );
+              -ms-transform:     rotateY( 0deg );
+              -o-transform:      rotateY( 0deg );
+              -webkit-transform: rotateY( 0deg );
+      }
+      
+      #side-2 {
+          transform:             rotateY( 180deg );
+              -moz-transform:    rotateY( 180deg );
+              -ms-transform:     rotateY( 180deg );
+              -o-transform:      rotateY( 180deg );
+              -webkit-transform: rotateY( 180deg );
+      }
+        
+      .flip-side-1 {    
+        transform:             rotateY( 0deg ) !important;
+            -moz-transform:    rotateY( 0deg ) !important;
+            -ms-transform:     rotateY( 0deg ) !important;
+            -o-transform:      rotateY( 0deg ) !important;
+            -webkit-transform: rotateY( 0deg ) !important;
+    }
+    
+    .flip-side-2 {
+        transform:             rotateY( 180deg ) !important;
+            -moz-transform:    rotateY( 180deg ) !important;
+            -ms-transform:     rotateY( 180deg ) !important;
+            -o-transform:      rotateY( 180deg ) !important;
+            -webkit-transform: rotateY( 180deg ) !important;
+    }
+      }
+      .to-do-title {
+        font-weight: bold;
+        font-size: 18px;
+        margin-bottom: 0;
+      }
+    }
+  }
 }

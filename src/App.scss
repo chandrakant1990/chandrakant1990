@@ -57,3 +57,36 @@
     }
   }
 }
+
+@media screen and (max-width: 1199px) {
+  .App {
+    overflow: hidden;
+    .main-page-container {
+      padding: unset;
+    }
+    
+    .bottom-div {
+      display: block;
+      height: 112px;
+      .iconic-text{
+        font-size: 16px;  
+      }
+      .bottpm-top{
+        padding: 3% 3%;
+      }
+      .contact-detail{
+      font-size: 14px;
+      }
+      .copyright-text{
+        font-size: 10px;
+      }
+      .bottom-bottom {
+        padding: 0% 3%;
+        margin-top: 3%;
+      }
+      .media-icons {
+        margin: 0 4%;
+    }
+    }
+  }
+}

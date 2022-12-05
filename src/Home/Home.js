@@ -1,13 +1,15 @@
-import React, { memo } from 'react'
+import React, { memo, useCallback } from 'react'
 import './Home.scss'
 import Icon from '../Icons/Icon'
-import SimpleImageSlider from 'react-simple-image-slider'
+import SimpleImageSlider from 'react-simple-image-slider';
+import * as d3 from "d3";
 const images = [
   { url: './images/HomeSlider1.jpg' },
   { url: './images/HomeSlider2.jpg' },
   { url: './images/HomeSlider3.jpg' },
   { url: './images/HomeSlider4.jpg' },
 ];
+
 
 
 function Home(props) {
@@ -25,8 +27,19 @@ function Home(props) {
     image:"./images/new_deco_web.jpg",
     title:"Provide Dental Service",
     content:"We provide a range of digital and designing services to startups and small businesses. Taking every aspect of the product or brand into consideration. We believe in a powerful insight driven , design-led approach , making it a right platform for YOU."
-  }]
+  }];
 
+  const onSwipeImage=useCallback((index)=>{
+    console.log("Index",index,d3.selectAll(`.to-do-main-${index}`).select('#side-2').attr("class"));
+    if(d3.selectAll(`.to-do-main-${index}`).select('#side-2').attr("class")=='flip'){
+      d3.selectAll(`.to-do-main-${index}`).select('#side-2' ).attr('class','flip flip-side-1');
+      d3.selectAll(`.to-do-main-${index}`).select('#side-1' ).attr('class','flip flip-side-2');
+    }else{
+      d3.selectAll(`.to-do-main-${index}`).select('#side-2' ).attr('class','flip');
+      d3.selectAll(`.to-do-main-${index}`).select('#side-1' ).attr('class','flip');
+    }
+    
+  },[])
   return (
     <div className="Home">
       <div className="top-static-text">
@@ -59,7 +72,7 @@ function Home(props) {
       </div>
       <div className="slider-in-home">
         <SimpleImageSlider
-          width={"80%"}
+          width={window.innerWidth <=1199 ? "100%": "80%"}
           height={550}
           images={images}
           showBullets={true}
@@ -68,7 +81,7 @@ function Home(props) {
         />
       </div>
 
-      <div className='creative-thinking'>
+       <div className='creative-thinking'>
         <div className='label-thinking'>Creative Thinking</div>
         <div className='left-right-creative'>
           <div className='left'>
@@ -85,7 +98,7 @@ function Home(props) {
       <div className='what-we-do'>
         <div className='label-thinking'>What We Do</div>
         <div className='label-capable'>Capabilities</div>
-        <div className='list-of-todo'>
+        {window.innerWidth > 1199 && <div className='list-of-todo'>
           {whatWeDoes.map((data,index)=>{
             return <div key={`to_do${index}`} className='to-do-main'>
               <div className='left'>
@@ -96,8 +109,32 @@ function Home(props) {
                 <div>{data.content}</div></div>
             </div>
           })}
-        </div>
-      </div>
+        </div>}
+        {window.innerWidth <= 1199 && <div className='list-of-todo'>
+          {whatWeDoes.map((data,index)=>{
+            return <div key={`to_do${index}`} className={`to-do-main to-do-main-${index}`}>
+              <div className='to-do-title'>{data.title}</div>
+              <div className='left'>
+                <div id="side-1" className='flip'>
+                <img src={data.image} width={"100%"} height={450}/>
+                <div className='capability-details'>
+                  <div className='detailed-text' onClick={()=>{onSwipeImage(index)}}>More Details</div>
+                </div>
+                </div>
+                <div id="side-2" className='flip'>
+                  <div className='right'>
+                    <div>{data.content}</div>
+                  </div>
+                  <div className='capability-details'>
+                  <div className='detailed-text' onClick={()=>{onSwipeImage(index)}}>Back</div>
+                </div>
+                </div>
+                
+              </div>
+            </div>
+          })}
+        </div>}
+      </div> 
 
       
     </div>
